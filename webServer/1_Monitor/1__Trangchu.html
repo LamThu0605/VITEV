@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="1__Trangchu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <div class="box">
+          <img src="./logoctu.png" alt="Logo" width="100" height="100">
+        </div>
+        <p><b>GIÁM SÁT VÀ ĐIỀU KHIỂN HỆ THỐNG AO NUÔI TÔM</b></p>
+      </div>
+      <!-- Navigation bar-->
+      <div id="Navigation">
+        <ul>
+          <li><a class="active" href="./1__Trangchu.html" style="color: white;">Quan trắc</a></li>
+          <li><a href="../3_Data/3__Data.html">Dữ liệu</a></li>
+          <li><a href="../2_Setting_1/2__Setting.html">Cài đặt</a></li>
+          
+        </ul>
+      </div>
+      <div id="scroll">
+        <section>
+          <thongsovachart>
+            <thongso>
+              <h2 style="font-size: 40px; margin: 15px;">Thông số</h2>
+              <table id="Table1">
+                <tr>
+                  <td>
+                    <table style="table-layout: auto;">
+                      <!-- <tr> -->
+                      <td style="font-size: 25px; color: black;">DO: </td>
+                      <td id="DO_Val" style="font-size: 60px;padding-bottom:
+                        13px; "> 8</td>
+                      <td style="font-size: 25px; ">mg/l</td>
+                      <!-- </tr> -->
+                    </table>
+                  </td>
+                  <td>
+                    <table style="table-layout: fixed;">
+                      <tr>
+                        <td style="font-size: 25px; color: black;">pH: </td>
+                        <td id="pH_Val" style="font-size: 60px; padding-bottom:
+                          13px;">5</td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td>
+                    <table style="table-layout: auto;">
+                      <td style="font-size: 25px;color: black;">Nhiệt độ: </td>
+                      <td id="temp_Val" style="font-size: 60px; padding-bottom:
+                        13px;">28</td>
+                      <td style="font-size: 25px;">&deg;C</td>
+                    </table>
+                  </td>
+                  <td>
+                    <table>
+                      <td style="font-size: 20px;color: black;">Mực nước: </td>
+                      <td id="WL_Val" style="font-size: 60px; padding-bottom:
+                        13px;">2</td>
+                      <td style="font-size: 25px;">cm</td>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <table style="width:100%; line-height: 10px; font-size: 18px;
+                table-layout: fixed;">
+                <br><br>
+                <tr>
+                  <td id="time_update">Thời gian cập nhật: 12:28:41 2022-12-11</td>
+                </tr>
+              </table>
+            </thongso>
+
+          </thongsovachart>
+
+          <canhbaovathietbi>
+            <ChuCanhbao><b>Cảnh báo</b></ChuCanhbao>
+            <Canhbao>
+              <h2 style="font-size: 35px; margin: 10px;"></h2>
+              <div class="listHolder">
+                <ul class="list"></ul>
+              </div>
+            </Canhbao>
+          </canhbaovathietbi>
+
+          <chartlayout>
+            <chart>
+              <table style="table-layout: fixed; margin-top: -22px; border: 1;">
+                <tr>
+                  <td id="chart1">
+                    <canvas id="chartDO"></canvas>
+                  </td>
+                  <td id="chart2">
+                    <canvas id="chartPH"></canvas>
+                  </td>
+                  <td id="chart3">
+                    <canvas id="chartTemp"></canvas>
+                  </td>
+                  <td id="chart4">
+                    <canvas id="chartWL"></canvas>
+                  </td>
+                </tr>
+              </table>
+            </chart>
+          </chartlayout>
+        </section>
+
+        <div id="footer">
+          <p>copyright by MDF team - CTU</p>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./1_Alarm.js"></script>
+    <script src="./lineChart.js"></script>
+    <script type="module" src="./1_Monitor.js"></script>
+
+  </body>
+
+</html>

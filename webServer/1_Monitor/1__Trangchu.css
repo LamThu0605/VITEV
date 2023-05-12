@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+}
+
+#wrapper {
+    width: 100%;
+    font-family: Helvetica;
+    /* Arial, Helvetica, sans-serif; */
+}
+
+#header {
+    background-color: #00b4d8;
+    margin-top: -30px;
+    width: 100%;
+    height: 100px;
+}
+
+#header p {
+    color: rgb(3, 3, 10);
+    font-family: Helvetica;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 30px;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 30px 0px;
+}
+
+.box {
+    float: left;
+    height: 100%;
+    background-color: #00b4d8;
+}
+
+#Navigation {
+    padding-left: 270px;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    text-overflow: hidden;
+    /* white-space: nowrap; */
+    overflow: hidden;
+}
+
+#Navigation ul {
+    font-family: sans-serif;
+    font-size: 1rem;
+
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+
+}
+
+#Navigation li {
+    float: left;
+    display: inline;
+}
+
+#Navigation li a {
+    float: left;
+    color: Black;
+    padding: 11px 120px;
+    text-decoration: none;
+}
+
+#Navigation li a:hover:not(.active) {
+    background-color: #359bb1;
+}
+
+#Navigation li a.active {
+    background-color: #0077b6;
+}
+
+#Navigation li.right {
+    float: right;
+}
+
+#scroll {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+/* Style 70% layout right */
+thongsovachart {
+    float: right;
+    padding: 20px;
+    background-color: #0077b6;
+    width: 70%;
+    height: 250px;
+    overflow: hidden;
+}
+
+/* Style 30% layout left */
+canhbaovathietbi {
+    float: left;
+    padding: 20px;
+    background-color: #0077b6;
+    width: 30%;
+    height: 250px;
+}
+Canhbao p {
+    display: block;
+    margin: 0px 0px;
+}
+
+chartlayout{
+    float: left;
+    width: 100%;
+    height: 280px;
+    background-color: #0077b6;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+Thongso {
+    float: left;
+    text-align: center;
+    border: 8px solid #90e0ef;
+    border-radius: 25px;
+    color: black;
+    background-color: white;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+#Table1{
+    width:100%;
+    height: 55px;
+    line-height: 10px;
+    /* vertical-align: bottom;
+    text-align: center; */
+    table-layout: fixed;
+}
+#Table1 td{
+    vertical-align: bottom;
+}
+/* Create two columns/boxes that floats next to each other */
+chart {
+    margin-top: 20px;
+    border-radius: 20px;
+    float: left;
+    background: white;
+    padding: 20px;
+    width: 100%;
+    height: 250px;
+    justify-content: space-between;
+}
+
+#chart1,
+#chart2,
+#chart3,
+#chart4 {
+    text-align: center;
+    width: 1%;
+    height: 240px;
+}
+
+
+/* Style the list inside the menu */
+chart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+Canhbao {
+    float: left;
+    background-color: white;
+    padding: 0px;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    width: 100%;
+    height: 175px;
+    overflow-y: scroll;
+    border-left: red solid ;
+    border-right: red solid ;
+    border-bottom: red solid ;
+
+}
+ChuCanhbao{
+    float: left;
+    background-color: white;
+    padding-top: 5px;
+    text-align: center;
+    color: rgb(5, 5, 5);
+    border: 3px solid none;
+    font-size: 40px;
+    width: 100%;
+    height: 45px;
+    border-left: red solid ;
+    border-right: red solid ;
+    border-top: red solid ;
+}
+Motor {
+    float: left;
+    text-align: center;
+    line-height: 13px;
+    /*Khoảng cách các dòng*/
+    border-radius: 20px;
+    /* bo góc cả khung */
+    border: 3px solid whitesmoke;
+    background-color: #caf0f8;
+    width: 100%;
+    height: 240px;
+    margin-top: 20px;
+    color: white;
+    overflow: hidden;
+}
+
+setting {
+    margin-left: 3%;
+    /*cách lề trái*/
+    float: left;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+    background-color: #caf0f8;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: -7px;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #003b46;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #003B46;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 40px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#time_update {
+    line-height: 5px;
+    font-size: 20px;
+}
+
+#time_settings {
+    margin-top: 5px;
+}
+
+#footer {
+    float: left;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    background-color: white;
+    width: 100%;
+    height: 45px;
+}
+#footer p{
+    margin-block-start: 10px;
+    margin-block-end: 0em;
+}
+
+.listName {
+    font-size: 15px;
+    text-align: left;
+}
+/* .listHolder{
+    overflow-y: scroll;
+} */

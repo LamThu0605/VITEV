@@ -1,0 +1,322 @@
+* {
+    box-sizing: border-box;
+}
+
+#wrapper {
+    width: 100%;
+    font-family: Helvetica;
+}
+
+#header {
+    background-color: #00b4d8;
+    margin-top: -30px;
+    width: 100%;
+    height: 100px;
+}
+#header b{
+    font-size: 32px;
+}
+#header p {
+    color: rgb(3, 3, 10);
+    font-family: sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 30px;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.box {
+    float: left;
+    height: 100%;
+    background-color: #00b4d8;
+}
+
+#Navigation {
+    padding-left: 280px;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    background-color: white;
+    text-overflow: hidden;
+    overflow: hidden;
+}
+#NavigationChild {
+    /* padding-left: 280px; */
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    /* text-overflow:clip;
+    white-space: nowrap; */
+    overflow: hidden;
+}
+#Navigation ul {
+    font-family: sans-serif;
+    font-size: 1rem;
+
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+
+}
+
+#Navigation li {
+    float: left;
+    display: inline;
+}
+
+#Navigation li a {
+    float: left;
+    color: black;
+    padding: 10px 120px;
+    text-decoration: none;
+}
+
+#Navigation li a:hover:not(.active) {
+    background-color: #359bb1;
+}
+
+#Navigation li a.active {
+    background-color: #0077b6;
+}
+
+#Navigation li.right {
+    float: right;
+}
+
+#scroll {
+    height: auto;
+    overflow-y: scroll;
+}
+
+/* Tạo bố cục giao diện */
+#L_Header p{
+    color: rgb(3, 3, 10);
+    font-family: sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#L_Header {
+    margin: 10px;
+}
+
+#L_C {
+    width: 98%;
+    margin-left: 20px;
+}
+
+#L_Left {
+    float: left;
+    width: 30%;
+    margin-left: 20px;
+}
+
+#L_Right {
+    float: right;
+    width: 65%;
+    margin-right: 20px;
+}
+
+#bodier {
+    width: 100%;
+    height: 100%;
+}
+
+/* Style the body */
+body {
+    background-color: #0077b6;
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #07575B;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    display: block;
+    color: white;
+    font-weight: 500;
+}
+
+label {
+    color: white;
+}
+
+.Layout {
+    margin: auto;
+    width: 100%;
+    background-color: #90e0ef;
+    /* padding: 10px 10px 0 10px; */
+    border-radius: 10px;
+    border: 7px solid #90e0ef;
+}
+
+input {
+    background-color: #C4DFE6;
+}
+input[type="number"]{
+    width: 70px;
+}
+form{
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+table tr th {
+    width: 33%;
+}
+
+/* Định dạng nút nhấn */
+.BT {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: #90e0ef;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px white;
+}
+
+.BT1 {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.BT:hover {
+    background-color: #66A5AD
+}
+
+.BT:active {
+    background-color: #66A5AD;
+    box-shadow: 0 5px #C4DFE6;
+    transform: translateY(4px);
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #C4DFE6;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #66A5AD;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #66A5AD;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+.Layout input {
+    background-color: white;
+    font-family: sans-serif;
+}
+
+form option {
+    background-color: white;
+    font-family: sans-serif;
+}
+
+#footer {
+    float: left;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    background-color: white;
+    width: 100%;
+    height: 45px;
+}
+#footer p{
+    margin-block-start: 10px;
+    margin-block-end: 0em;
+}

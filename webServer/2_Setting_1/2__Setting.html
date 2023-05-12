@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Cài đặt</title>
+  <link rel="stylesheet" href="2__Setting.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="box">
+        <img src="./logoctu.png" alt="Logo" width="100" height="100">
+      </div>
+      <p><b>GIÁM SÁT VÀ ĐIỀU KHIỂN HỆ THỐNG AO NUÔI TÔM</b></p>
+    </div>
+    <!-- Navigation bar-->
+    <div id="Navigation">
+      <ul>
+        <li><a href="../1_Monitor/1__Trangchu.html">Quan trắc</a></li>
+        <li><a href="../3_Data/3__Data.html">Dữ liệu</a></li>
+        <li><a class="active" href="./2__Setting.html" style="color: white;">Cài đặt</a></li>
+      </ul>
+    </div>
+
+    <section>
+      <div id="bodier">
+        <div id="L_Header">
+          <p style="color: white;">
+            <b>CÀI ĐẶT THÔNG SỐ HỆ THỐNG</b>
+          </p>
+          <span id="item"></span>
+        </div>
+
+        <div id="L_C">
+          <!-- Bố cục trái -->
+          <div id="L_Left">
+            <div id="Chiso_moitruong" class="Layout">
+              <h2>CHỈ SỐ MÔI TRƯỜNG</h2>
+              <form>
+                <label>DO<br>
+                  <input style="text-align: center;" type="number" id="DO_min" onchange="checkDO1()"
+                    placeholder="Nhập vào DO_Min"> -
+                  <input style="text-align: center;" type="number" id="DO_max" onchange="checkDO2()"
+                    placeholder="Nhập vào DO_Max">
+                </label><br>
+                <label>Nồng độ pH<br>
+                  <input style="text-align: center;" type="number" id="pH_min" onchange="checkPH1()"
+                    placeholder="Nhập vào pH_Min"> -
+                  <input style="text-align: center;" type="number" id="pH_max" onchange="checkPH2()"
+                    placeholder="Nhập vào pH_Max">
+                </label><br>
+                <label>Nhiệt độ nước<br>
+                  <input style="text-align: center;" type="number" id="Temp_min" onchange="checkTemp1()"
+                    placeholder="Nhập vào Temp_Min"> -
+                  <input style="text-align: center;" type="number" id="Temp_max" onchange="checkTemp2()"
+                    placeholder="Nhập vào Temp_Max">
+                </label><br>
+                <label>Mức nước<br>
+                  <input style="text-align: center;" type="number" id="WL_min" onchange="checkWL1()"
+                    placeholder="Nhập vào LW_Min"> -
+                  <input style="text-align: center;" type="number" id="WL_max" onchange="checkWL2()"
+                    placeholder="Nhập vào LW_Max">
+                </label><br>
+              </form>
+              <br>
+            </div>
+          </div>
+          <!-- Bố cục phải -->
+          <div id="L_Right">
+            <div id="Thongso_dieukhien" class="Layout">
+              <!-- Thanh điều hướng cài đặt thông số -->
+              <div id="Navigation" style="padding: 0px 30px; overflow: hidden; border-radius: 3px 3px 0px 0px;">
+                    <ul>
+                        <li><a class="active" href="../2_Setting_1/2__Setting.html"  style="padding-left: 65px; padding-right: 65px; color: white;">Thiết bị 1</a></li>
+                        <li><a href="../2_Setting_2/2__Setting.html"  style="padding-left: 65px; padding-right: 65px;">Thiết bị 2</a></li>
+                        <li><a href="../2_Setting_3/2__Setting.html"  style="padding-left: 65px; padding-right: 65px;">Thiết bị 3</a></li>
+                        <li><a href="../2_Setting_4/2__Setting.html"  style="padding-left: 65px; padding-right: 65px;">Thiết bị 4</a></li>
+                    </ul>
+                  </div>
+              <h2>THIẾT LẬP THÔNG SỐ</h2>
+              <form>
+                <label>Chế độ điều khiển</label>
+                <select id="Mode_Ctrl">
+                  <option value="0">--Hãy lựa chọn chế độ điều khiển--</option>
+                  <option value="1">Chế độ 1: Tự động theo thời gian trong ngày</option>
+                  <option value="2">Chế độ 2: Tự động theo chu kỳ</option>
+                  <option value="3">Chế độ 3: Thủ công</option>
+                </select>
+                </ul>
+              </form>
+              <br>
+
+              <div id="DK_Chedo_1" style="display: none;text-align: center;">
+                <h3>TỰ ĐỘNG THEO THỜI GIAN TRONG NGÀY</h3> <br>
+
+                <div id="time_1">
+                  <label>Tại thời điểm 1 &nbsp;</label>
+                  <input type="time" id="RTime_1" placeholder="hh:mm" value="02:30" required="">
+                  <label style="margin-left: 60px;">Thời gian hoạt động (phút)</label>
+                  <input type="number" id="PTime_1" placeholder="mm" value="45" required=""> <br><br>
+                </div>
+
+                <div id="time_2">
+                  <label>Tại thời điểm 2 &nbsp;</label>
+                  <input type="time" id="RTime_2" placeholder="hh:mm" value="01:30" required="">
+                  <label style="margin-left: 60px;">Thời gian hoạt động (phút)</label>
+                  <input type="number" id="PTime_2" placeholder="mm" value="45" required=""> <br><br>
+                </div>
+
+                <div id="time_3">
+                  <label>Tại thời điểm 3 &nbsp;</label>
+                  <input type="time" id="RTime_3" placeholder="hh:mm" value="01:30" required="">
+                  <label style="margin-left: 60px;">Thời gian hoạt động (phút)</label>
+                  <input type="number" id="PTime_3" placeholder="mm" value="45" required=""> <br><br>
+                </div>
+
+                <div id="time_4">
+                  <label>Tại thời điểm 4 &nbsp;</label>
+                  <input type="time" id="RTime_4" placeholder="hh:mm" value="01:30" required="">
+                  <label style="margin-left: 60px;">Thời gian hoạt động (phút)</label>
+                  <input type="number" id="PTime_4" placeholder="mm" value="45" required=""> <br><br>
+                </div>
+
+                <div id="time_5">
+                  <label>Tại thời điểm 5 &nbsp;</label>
+                  <input type="time" id="RTime_5" placeholder="hh:mm" value="01:30" required="">
+                  <label style="margin-left: 60px;">Thời gian hoạt động (phút)</label>
+                  <input type="number" id="PTime_5" placeholder="mm" value="45" required=""> <br><br>
+                </div>
+
+                <div id="time_6">
+                  <label>Tại thời điểm 6 &nbsp;</label>
+                  <input type="time" id="RTime_6" placeholder="hh:mm" value="01:30" required="">
+                  <label style="margin-left: 60px;">Thời gian hoạt động (phút)</label>
+                  <input type="number" id="PTime_6" placeholder="mm" value="45" required=""> <br><br>
+                </div>
+
+                <div id="time_7">
+                  <label>Tại thời điểm 7 &nbsp;</label>
+                  <input type="time" id="RTime_7" placeholder="hh:mm" value="01:30" required="">
+                  <label style="margin-left: 60px;">Thời gian hoạt động (phút)</label>
+                  <input type="number" id="PTime_7" placeholder="mm" value="45" required=""> <br><br>
+                </div>
+
+                <div id="time_8">
+                  <label>Tại thời điểm 8 &nbsp;</label>
+                  <input type="time" id="RTime_8" placeholder="hh:mm" value="01:30" required="">
+                  <label style="margin-left: 60px;">Thời gian hoạt động (phút)</label>
+                  <input type="number" id="PTime_8" placeholder="mm" value="45" required=""> <br><br>
+                </div>
+
+                <div id="time_9">
+                  <label>Tại thời điểm 9 &nbsp;</label>
+                  <input type="time" id="RTime_9" placeholder="hh:mm" value="01:30" required="">
+                  <label style="margin-left: 60px;">Thời gian hoạt động (phút)</label>
+                  <input type="number" id="PTime_9" placeholder="mm" value="45" required=""> <br><br>
+                </div>
+
+                <div id="time_10">
+                  <label>Tại thời điểm 10</label>
+                  <input type="time" id="RTime_10" placeholder="hh:mm" value="01:30" required="">
+                  <label style="margin-left: 60px;">Thời gian hoạt động (phút)</label>
+                  <input type="number" id="PTime_10" placeholder="mm" value="45" required=""> <br><br>
+                </div>
+
+                <button style="margin-top: 5px;" class="BT1" id="bt_add">Thêm</button>
+                <button style="margin-top: 5px; margin-left: 10px;" class="BT1" id="bt_remove">Xóa</button>
+              </div>
+
+              <div id="DK_Chedo_2" style="display: none; text-align: center;">
+                <h3>TỰ ĐỘNG THEO CHU KỲ</h3> <br>
+
+                <label>Chu kỳ hoạt động (phút)</label>
+                <input type="number" style="text-align: center;" id="Tperiod" placeholder="mm" value="60">
+                <label style="margin-left: 60px;">Thời gian mỗi lần hoạt động (phút)</label>
+                <input type="number" id="Tperiod_t" style="text-align: center;" placeholder="mm" value="10">
+                <br>
+                <br>
+              </div>
+
+              <div id="DK_Chedo_3" style="display: none; text-align: center; margin-bottom: 10px;">
+                <h3>ĐIỀU KHIỂN THỦ CÔNG</h3>
+                <table>
+                  <tr>
+                    <th>
+                      <label id="txt_sw1">Thiết bị 1</label>
+                      <label class="switch">
+                        <input type="checkbox" id="SW_1" value="OFF">
+                        <span class="slider round"></span>
+                      </label>
+                    </th>
+                    <!-- <th>
+                      <label>Thiết bị 2</label>
+                      <label class="switch">
+                        <input type="checkbox" id="SW_2" value="OFF">
+                        <span class="slider round"></span>
+                      </label>
+                    </th>
+                    <th>
+                      <label>Máy bơm khí</label>
+                      <label class="switch">
+                        <input type="checkbox" id="SW_3" value="OFF">
+                        <span class="slider round"></span>
+                      </label>
+                    </th> -->
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="BT_Save" style="width: 100%; float: left; text-align: center; margin-top: 20px;">
+      <button id="bt_Save" class="BT">LƯU</button>
+    </div>
+
+    <div id="footer" style="margin-top: 30px;">
+      <p>copyright by MDF team - CTU</p>
+    </div>
+
+  </div>
+
+  <script src="./2_setting.js"></script>
+  <script type="module" src="./2_firebase.js"></script>
+</body>
+
+</html>
